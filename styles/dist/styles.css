@@ -1,0 +1,107 @@
+@keyframes notify {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  background: #212121;
+  color: #edf2f7;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#app > header {
+  padding: 44px 0;
+}
+#app > header h1 {
+  background: linear-gradient(to right, #3490dc, #9561e2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#app > div:first-of-type {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app > div:first-of-type > span {
+  font-size: 3.75rem;
+  font-weight: bold;
+}
+#app ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 800px;
+  gap: 22px;
+  padding: 44px 32px;
+}
+#app ul li {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  max-width: 250px;
+  min-width: 250px;
+  flex: 1;
+  transform: rotateX(10deg);
+  transition: transform 0.4s linear;
+}
+#app ul li header {
+  width: 100%;
+  background: linear-gradient(to right, #3490dc, #9561e2);
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#app ul li > div {
+  height: 100px;
+  width: 100%;
+  background-color: #2222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  text-transform: uppercase;
+}
+#app ul li:hover {
+  transform: rotateX(0);
+}
+#app .notify {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #9561e2;
+  padding: 12px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  animation: notify 0.3s linear;
+}

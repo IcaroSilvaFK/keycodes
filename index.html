@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/dist/styles.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>JavaScript KeyCodes</title>
+</head>
+
+<body>
+  <main id="app">
+    <header>
+      <h1>JavaScript KeyCodes</h1>
+    </header>
+
+    <div>
+      <span v-if="key">
+        {{ key }}
+      </span>
+    </div>
+    <ul>
+      <li @click="copText(keyboard)">
+        <header>
+          <span>
+            event key
+          </span>
+        </header>
+        <div>
+          {{ keyboard }}
+        </div>
+      </li>
+      <li @click="copText(key)">
+        <header>
+          <span>
+            Event which
+          </span>
+        </header>
+        <div>
+          {{ key }}
+        </div>
+      </li>
+      <li @click="copText(code)">
+        <header>
+          <span>
+            Event code
+          </span>
+        </header>
+        <div>
+          <span>{{code}}</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="notify" v-if="isVisibleNotify">
+      <span>Copied text to clipboard</span>
+    </div>
+  </main>
+
+
+
+  <script src="./scripts/app.js"></script>
+</body>
+
+</html>
