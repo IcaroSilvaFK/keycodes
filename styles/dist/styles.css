@@ -105,3 +105,11 @@ html {
   text-transform: uppercase;
   animation: notify 0.3s linear;
 }
+#app footer {
+  padding: 12px 0;
+  color: #cbd5e0;
+  font-style: italic;
+}
+#app footer b {
+  color: #9561e2;
+}

@@ -143,4 +143,14 @@ html {
 
     animation: notify 0.3s linear;
   }
+
+  footer {
+    padding: 12px 0;
+    color: $gray400;
+    font-style: italic;
+
+    b {
+      color: $purple;
+    }
+  }
 }
